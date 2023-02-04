@@ -1,0 +1,168 @@
+
+#Comentários <div>
+  Os comentários no css não irão afetar seu código, mas pode nos ajudar a lembrar de blocos de códigos ou agrupar e organizar nosso código, deixa dicas para a leitura e ajuda os outros a entenderem nosso código.
+
+  Apenas não esqueça de fechar um comentário aberto.
+
+  Os comentários abrem com /* e terminam com */ .
+
+  Você também pode usar um comentário para desabilitar partes do seu código, o que possibilitaria um debug mais fácil, ou caso deseje fazer alguma alteração sem quebrar todo o seu código.
+</div><br>
+
+#Seletores <div>
+  Os seletores são o que conectam um elemento HTML com o CSS, existem vários tipos, inclusive, nós vimos um na última aula, o Element/Type selector, mas também temos o seletor global, que é um * (asterisco), ID selector, que é # (cerquilha, cardinal) e o ID do elemento HTML, class selector, que é um . (ponto) e o nome da classe, e mais alguns que podemos entender mais tarde no curso.
+  Os seletores que mais usaremos serão realmente apenas os anteriormente citados, e vamos entrar em exemplos de como usá-los:
+  HTML
+    <div id="container" class="m-40">
+      <h1>Título</h1>
+      <h2>Subtitulo</h2>
+    </div>
+    CSS
+    /* ID selector */
+    #container {
+      width: 200px;
+    }
+
+    /* Class selector */
+    .m-40 {
+      margin: 40px;
+    }
+
+    /* Element/Type selector + Agrupamento de seletores */
+    h1, h2 {
+      color: blue;
+      font-size: 60px;
+      background: gray;
+    }
+
+</div><br>
+
+#Box Model <div>
+  Nesta aula falaremos sobre o conceito de caixas, já que o CSS trabalha com essa ideia de caixas, ou seja, o box model. Mas o quê exatamente é esse box model?
+
+  É uma caixa retangular. Essa caixa possui as mesmas propriedades de uma caixa 2D, e tem como propriedades:
+
+  Tamanho (largura x altura): width e height, respectivamente
+  Conteúdo: o content
+  Bordas: o border
+  Preenchimento interno: o padding
+  Espaços fora da caixa: a margin
+  Quase todo elemento de uma página é considerado uma caixa: Posicionamentos, tamanhos, espaçamentos, bordas, cores, então, em suma, elementos HTML são caixas, assim como quase tudo no CSS.
+</div><br>
+
+#Origem do CSS <div>
+  <a href="index.html">Arquivos</a><br> / <a href="style.css">Arquivos</a><br>
+</div><br>
+
+#A cascata <div>
+  A escolha do browser de qual regra aplicar, caso haja muitas regras para o mesmo elemento.
+
+  Seu estilo é lido de cima para baixo, ou seja, caso haja algum selector com informações conflitantes, o mais embaixo é o que será atribuído.
+  São levados em consideração 3 fatores:
+  
+  A origem do estilo;
+  
+  A especificidade;
+  
+  A importância;
+</div><br>
+
+#Especificidade <div>
+  É um cálculo matemático, onde cada tipo de seletor e origem do estilo possuem valores a serem considerados.
+
+  Os mais fracos são universal selector, combinators e negation pseudo-class, com o valor de 0. Em seguida, com valor de 1, são os element type selector e pseudo-elements.
+
+  Também temos os classes e attribute selectors, com valor de 10, ou seja, são mais fortes que os anteriores.
+
+  O segundo mais forte, ID selector, com um valor de 100, vence todos os selectors anteriores.
+
+  Por fim, temos o inline, com o valor 1000, quaisquer desses selectors anteriormente citado
+</div><br>
+
+#Regra Importante <div>
+  sintaxe: !important
+
+  São raras as ocasiões nas quais se devem usar um iportant, pois é em geral uma má pratica, visto que quebra o fluxo natural da cascata e pode acabar te atrapalhando caso você a deixe em algum lugar no seu código.
+  
+  Portanto evite ao máximo seu uso.
+</div><br>
+
+#At rules <div>
+  São regras relacionadas ao comportamento do CSS, começa com um sinal de @ seguido do identificador e do valor.
+
+  São as seguintes:
+
+  @import serve para incluir um CSS externo.
+  @media são regras condicionais para vários dispositivos.
+  @font-face é para colocar fontes externas.
+  @keyframes serve para as animations do CSS.
+</div><br>
+
+#ShortHand <div>
+  É basicamente a ideia de junção de propriedades, para que fiquem de forma resumida e legível.
+
+  Abaixo um exemplo de propriedades com e sem o shorthand:
+
+  {
+      /* background properties */
+      background-color: #000;
+      background-image: url(images/bg.gif);
+      background-repeat: no-repeat;
+      background-position: left top;
+
+      /* background shorthand*/
+      background: #000 url(images/bg.gif) no-repeat left top;
+
+      /* font properties */
+      font-style: italic;
+      font-weight: bold;
+      font-size: .8em;
+      line-height: 1.2;
+      font-family: Arial, sans-serif;
+
+      /* font shorthand */ 
+      font: bold italic .8em/1.2 Arial, sans-serif;
+  }
+  Algumas das características do shorthand:
+
+  Não irá considerar propriedades anteriores, ou seja, caso faça um shorthand, apenas ele será considerado, quaisquer propriedades anteriores serão substituídas pelas do shorthand.
+
+  Os valores que não forem especificados irão assumir o valor padrão.
+
+  Por fim, geralmente, a ordem descrita não importa, mas, caso haja muitas propriedades com valores semelhantes, poderemos encontrar problemas.
+</div><br>
+
+#Funções <div>
+  Um tipo de valor existente no CSS, é estruturado com um nome seguido de abre e fecha parênteses.
+
+  Recebe um argumento, que são seus valores.
+
+  Um exemplo de função é:
+
+color: rgb(255,0,100);
+</div><br>
+
+#DevTools <div>
+  Uma das ferramentas mais importantes para o desenvolvedor CSS é o DevTools (do inglês, Ferramentas de Desenvolvedor), é recomendado que você estude e faça uso da mesma, pois será muito utilizada.
+</div><br>
+
+#Cuidados com a escrita <div>
+  É importante prestar atenção à sua escrita do CSS, identar seu código para facilitar a leitura, e mais importante, manter tudo organizado e funcionando!
+</div><br>
+
+#Vendo prefixes <div>
+  São coisas que permitem que browsers adiocionem features a fim de colocar em uso alguma novidade que vemos no CSS.
+
+  Exemplos:
+  
+  p {
+    -webkit-background-clip: text; /*Chrome, Safari, iOS e Android*/
+    -moz-background-clip: text; /* Mozilla (Firefox) */
+    -ms-background-clip: text; /* Internet Explorer ou Edge*/
+    -o-background-clip: text; /* Opera */
+  Você também pode consultar se a feature pode ser utilizada através dos sites:
+  
+  https://ireade.github.io/which-vendor-prefix
+  
+  https://caniuse.com
+</div>
