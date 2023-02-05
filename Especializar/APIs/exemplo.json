@@ -1,0 +1,19 @@
+{
+  "nome": "Lucas Muniz",
+  "cidade": "Maringá",
+  "telfone": 999999999,
+  "livros-favortis":[
+    "Força do Hábito",
+    "Pai rico pai ponre"
+  ],
+  "hobbies":{
+    "semana": "futebol",
+    "fim-de-semana": "Series",
+    "outros": [
+      "cs",
+      "estudos"
+    ]
+
+  }
+
+}
