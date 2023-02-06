@@ -1,0 +1,7 @@
+
+
+
+//atualizar github 
+git add .
+git commit -am "nome commit"
+git push -u origin main
